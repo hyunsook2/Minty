@@ -40,6 +40,10 @@
                     <a class="nav-link menu-a" th:href="@{getchatting}">채팅</a>
                     <p></p>
                 </div>
+
+
+
+
                 <div class="navbar-nav d-flex flex-row gap-2">
                     <a class="nav-link menu-a " th:href="@{usershop}">개인상점</a>
                     <p></p>
@@ -47,7 +51,10 @@
                     <p></p>
                     <a class="nav-link menu-a " th:href="@{manager}">관리자페이지</a>
                     <p></p>
-                    <a class="nav-link menu-a " th:href="@{join}">회원가입</a>
+                    <div sec:authorize="!isAuthenticated()">
+                        <a class="nav-link menu-a " th:href="@{join}">회원가입</a>
+                        <p></p>
+                    </div>
                     <p></p>
                     <div sec:authorize="hasAnyRole('USER', 'ADMIN') or hasAnyAuthority('USER', 'ADMIN')">
                         <a class="nav-link menu-a login" th:href="logout">로그아웃</a>

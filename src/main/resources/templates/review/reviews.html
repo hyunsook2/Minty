@@ -130,7 +130,7 @@
         <div class="review">
             <img class="review_rating" th:if="${review.rating != null}">
             <th:block th:switch="${review.rating}">
-                <img th:case="1" th:src="@{/image/review/reviewPage/star1.png}"
+                <img th:case="1" src="/image/review/reviewPage/star1.png"
                      style="width: 70px; height: 70px; position: absolute; top: 10px; left: 10px;"/>
                 <img th:case="2" th:src="@{/image/review/reviewPage/star2.png}"
                      style="width: 70px; height: 70px; position: absolute; top: 10px; left: 10px;"/>

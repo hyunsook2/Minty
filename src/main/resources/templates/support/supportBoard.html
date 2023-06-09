@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kr" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/layout}">
+<head>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous"
+  />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script th:inline="javascript">
+        $(document).ready(function () {
+
+      function loadPostList(verifyStatus) {
+      var searchBy = /* 현재 선택된 searchBy 값을 가져오는 코드 */;
+      var keyword = /* 현재 입력된 keyword 값을 가져오는 코드 */;
+
+      $.ajax({
+          url: '/support/supportBoard',
+          type: 'GET',
+          data: {
+              verifyStatus: verifyStatus,
+              searchBy: searchBy,
+              keyword: keyword
+          },
+          success: function (data) {
+              $('body').html(data);
+          },
+          error: function (xhr, status, error) {
+              console.error(xhr.responseText);
+          }
+      });
+    }
+    });
+
+    </script>
+  <style>
+            .menu-a {
+                color: black;
+                font-size: 20px;
+                font-weight: bolder;
+                font-family: 'font';
+            }
+    </style>
+</head>
+<body>
+<div layout:fragment="content">
+
+
+  <form th:action="@{/support/supportBoard}" method="get" class="search-form">
+    <div class="input-group" style="width:70vw; margin:auto; margin-top:4vh">
+      <select name="searchBy" class="form-select">
+        <option value="">전체</option>
+        <option value="이름" th:selected="${searchBy == 'name'}">작성자</option>
+        <option value="닉네임" th:selected="${searchBy == 'nickname'}">닉네임</option>
+      </select>
+      <input type="text" name="keyword" class="form-control" placeholder="검색어">
+      <button type="submit" class="btn btn-primary">검색</button>
+    </div>
+  </form>
+
+  <div class="btn-group" role="group" aria-label="Verify Status"  style="margin-left:15vw; margin-top:3vh">
+    <button type="button" class="btn btn-secondary" onclick="loadPostList(null)">전체</button>
+    <button type="button" class="btn btn-secondary" onclick="loadPostList('처리중')">처리중</button>
+    <button type="button" class="btn btn-secondary" onclick="loadPostList('처리완료')">처리완료</button>
+  </div>
+
+  <table class="table" style=" width:70vw; margin:auto;">
+    <thead>
+    <tr style="text-align: center;">
+      <th scope="col">No.</th>
+      <th id="title" scope="col">제목</th>
+      <th scope="col">작성자</th>
+      <th scope="col">닉네임</th>
+      <th scope="col">날짜</th>
+      <th scope="col">답변여부</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr style="text-align: center;" th:each="board : ${postList.content}">
+      <th scope="row">
+        <span th:text="${board.id}"></span>
+      </th>
+      <td id="title_rl">
+        <a th:href="@{'/support/supportView/'+${board.id}}">
+          <span th:text="${board.title}"></span>
+        </a>
+      </td>
+      <td>
+        <span th:text="${board.name}"></span>
+      </td>
+      <td>
+        <span th:text="${board.nickname}"></span>
+      </td>
+      <td>
+        <span th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')}"></span>
+      </td>
+      <td>
+        <span th:text="${board.verify_reply}"></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="navbar-nav me-md-auto d-flex flex-row gap-2">
+    <a type="button" class="nav-link menu-a" th:href="@{/support/new}"
+       style="background:rgb(85, 209, 85); border-radius:8px;border:rgb(75, 158, 106) solid 2px; margin-left:80vw;">
+      글쓰기</a>
+  </div>
+  <div class="pagination justify-content-center">
+    <ul class="pagination">
+      <li th:if="${postList.number > 0}" class="page-item">
+        <a class="page-link" th:href="@{/support/supportBoard(page=${postList.number - 1})}">이전</a>
+      </li>
+      <li th:each="page : ${#numbers.sequence(1, postList.totalPages)}"
+          th:class="${postList.number == page - 1 ? 'page-item active' : 'page-item'}">
+        <a class="page-link" th:href="@{/support/supportBoard(page=${page})}"><span th:text="${page}"></span></a>
+      </li>
+      <li th:if="${postList.number + 1 < postList.totalPages}" class="page-item">
+        <a class="page-link" th:href="@{/support/supportBoard(page=${postList.number + 1})}">다음</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

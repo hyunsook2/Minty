@@ -45,8 +45,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 250px;
-  height: 663px;
+  width: 13vw;
+  height: 71vh;
 }
 
 .ad img {
@@ -110,17 +110,17 @@
   </head>
   <!--광고배너-->
   <div class="ad">
-    <img id="adImage" src="/image/imsy_ad.jpg" alt="임시광고" style="height: 663px;"/></a>
+    <img id="adImage" src="/image/imsy_ad.jpg" alt="임시광고" style="height: 71vh;"/></a>
   </div>
 
   <!--리모컨(위아래 가기 글쓰기 등등)-->
   <div class="remote">
     <div>
-      <a class="button" th:href="@{sup}">고객문의</a>
+      <a class="button" th:href="@{support/supportBoard}">고객센터</a>
       <a class="updown up"><img src="/image/up.png" alt="맨위로" /></a>
     </div>
     <div>
-      <a class="button" th:href="@{writeForm}">글쓰기</a>
+      <a class="button" th:href="@{writeform}">글쓰기</a>
       <a class="updown down"><img src="/image/down.png" alt="맨아래로" /></a>
     </div>
     <div>
@@ -142,7 +142,7 @@
     전화 1234-1234 문의 Reboot@naver.com <br />
     <div class="footer-links">
       <br />
-      <a href="#">
+      <a th:href="@{support/supportBoard}">
         <img src="/image/Customer.PNG" alt="로고 이미지" width="30px" height="30px" />
         <br>
         고객센터

@@ -7,7 +7,8 @@
 
       .navbar {
         position: fixed;
-        width: 100%;
+       width: 100vw;
+           height: 11.7vh;
       }
       .menu-a {
         color: black;
@@ -213,7 +214,7 @@
       transition: opacity 0.5s ;
     }
 
-    .naver img {
+   /* .naver img {
       transition: opacity 0.5s;
     }
 
@@ -239,14 +240,14 @@
     .naver:hover::after {
       opacity: 1;
     }
-
+*/
 
        .kakao {
       position: relative;
       transition: opacity 0.5s ;
     }
 
-    .kakao img {
+   /* .kakao img {
       transition: opacity 0.5s;
     }
 
@@ -273,3 +274,4 @@
     .kakao:hover::after {
       opacity: 1;
     }
+    */

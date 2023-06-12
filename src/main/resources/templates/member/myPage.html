@@ -3,6 +3,8 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/layout}">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     /* 프로필 영역 스타일 */
     .profile-area {
@@ -77,13 +79,56 @@
       height: 300px;
     }
 
-
-    .attendance {
+    .deco {
       flex-grow: 1;
       border: 2px solid #000;
       height: 300px;
+      width:30vw;
     }
 
+    .Categories-area {
+        padding: 10px;
+        border-bottom: 2px solid #000;
+        border: 2px solid #000;
+        border-bottom: 2px solid #000;
+    }
+
+.tab-button {
+      display: block;
+      padding: 10px 20px 10px 20px;
+      float: left;
+      text-decoration: none;
+      cursor: pointer;
+      font-family:'font';
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border:2px solid black;
+      border-radius: 45px;
+      background-color: white;
+      transition: color 0.5s, background-color 0.5s ease-in-out;
+      color:black;
+      }
+      .tab-content {
+        display: none;
+        padding: 10px;
+      }
+      .show {
+        display: block;
+      }
+      .select {
+        background-color:#F5A9E1;
+       color:#FFFFFF;
+      }
+     .tab-button:hover {
+      background-color:#94E6DF;
+    }
+
+
+    .tab-content g{
+        margin: 0;
+        padding: 20px;
+    }
     /* 네비게이션 바 영역 스타일 */
     .Categories-area {
         padding: 10px;
@@ -151,6 +196,474 @@
         margin-right: 10px;
     }
 
+
+
+
+
+
+
+
+
+    .cool_btn1 {
+      width: 90px;
+      height: 90px;
+      margin: 10px 0 10px 10px;
+      position: relative;
+      -webkit-border-radius: 200px;
+      -moz-border-radius: 200px;
+      -ms-border-radius: 200px;
+      -o-border-radius: 200px;
+      border-radius: 200px;
+      background-image: -webkit-gradient(
+        linear,
+        50% 0%,
+        50% 100%,
+        color-stop(0%, #fafafa),
+        color-stop(50%, #e3e3e3),
+        color-stop(50%, #888888),
+        color-stop(100%, #666666)
+      );
+      background-image: -webkit-linear-gradient(
+        #fafafa,
+        #e3e3e3 50%,
+        #888888 50%,
+        #666666
+      );
+      background-image: -moz-linear-gradient(
+        #fafafa,
+        #e3e3e3 50%,
+        #888888 50%,
+        #666666
+      );
+      background-image: -o-linear-gradient(
+        #fafafa,
+        #e3e3e3 50%,
+        #888888 50%,
+        #666666
+      );
+      background-image: linear-gradient(
+        #fafafa,
+        #e3e3e3 50%,
+        #888888 50%,
+        #666666
+      );
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+    }
+    /* line 31, ../sass/screen.scss */
+    .cool_btn1 h1 {
+      text-align: center;
+      font-size: 25px;
+      margin: 15px 0 0 0;
+      color: #333;
+      text-shadow: 0 1px 0 white, 0 -1px 0 rgba(0, 0, 0, 0.5);
+      line-height: 1;
+    }
+    /* line 40, ../sass/screen.scss */
+    .cool_btn1 h1 i {
+      margin-top: 15px;
+      display: block;
+      font-style: normal;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: helvetica, arial, sans-serif;
+      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+
+    /* line 60, ../sass/screen.scss */
+    .cool_btn1:after {
+      content: "";
+      width: 98px;
+      height: 98px;
+      display: block;
+      position: absolute;
+      left: -4px;
+      top: -3px;
+      z-index: -1;
+      -webkit-border-radius: 200px;
+      -moz-border-radius: 200px;
+      -ms-border-radius: 200px;
+      -o-border-radius: 200px;
+      border-radius: 200px;
+      background-image: -webkit-gradient(
+        linear,
+        50% 0%,
+        50% 100%,
+        color-stop(0%, #cecece),
+        color-stop(100%, #e7e7e7)
+      );
+      background-image: -webkit-linear-gradient(#cecece, #e7e7e7);
+      background-image: -moz-linear-gradient(#cecece, #e7e7e7);
+      background-image: -o-linear-gradient(#cecece, #e7e7e7);
+      background-image: linear-gradient(#cecece, #e7e7e7);
+      -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.9);
+      -moz-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 1px 0px rgba(255, 255, 255, 0.9);
+    }
+
+    /* -------------------
+    Transitions
+    -------------------- */
+    /* line 76, ../sass/screen.scss */
+    .cool_btn1.blue,
+    .cool_btn1.teal,
+    .cool_btn1.green {
+      -webkit-transition-property: all;
+      -moz-transition-property: all;
+      -o-transition-property: all;
+      transition-property: all;
+      -webkit-transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    /* -------------------
+    Colors
+    -------------------- */
+    /* line 84, ../sass/screen.scss */
+    .cool_btn1.blue {
+      background-image: -webkit-gradient(
+        linear,
+        50% 0%,
+        50% 100%,
+        color-stop(0%, #d5d5d5),
+        color-stop(50%, #ffffff),
+        color-stop(50%, #577fbd),
+        color-stop(100%, #274281)
+      );
+      background-image: -webkit-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #577fbd 50%,
+        #274281
+      );
+      background-image: -moz-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #577fbd 50%,
+        #274281
+      );
+      background-image: -o-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #577fbd 50%,
+        #274281
+      );
+      background-image: linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #577fbd 50%,
+        #274281
+      );
+    }
+    /* line 86, ../sass/screen.scss */
+    .cool_btn1.blue h1 {
+      color: #4265a3;
+    }
+    /* line 89, ../sass/screen.scss */
+    .cool_btn1.blue h2 {
+      color: #1e3261;
+    }
+
+    /* line 93, ../sass/screen.scss */
+    .cool_btn1.teal {
+      background-image: -webkit-gradient(
+        linear,
+        50% 0%,
+        50% 100%,
+        color-stop(0%, #d5d5d5),
+        color-stop(50%, #ffffff),
+        color-stop(50%, #11b8fe),
+        color-stop(100%, #0187b8)
+      );
+      background-image: -webkit-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #11b8fe 50%,
+        #0187b8
+      );
+      background-image: -moz-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #11b8fe 50%,
+        #0187b8
+      );
+      background-image: -o-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #11b8fe 50%,
+        #0187b8
+      );
+      background-image: linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #11b8fe 50%,
+        #0187b8
+      );
+    }
+    /* line 95, ../sass/screen.scss */
+    .cool_btn1.teal h1 {
+      color: #149edb;
+    }
+    /* line 98, ../sass/screen.scss */
+    .cool_btn1.teal h2 {
+      color: #0c6186;
+    }
+
+    /* line 111, ../sass/screen.scss */
+    .cool_btn1.green {
+      background-image: -webkit-gradient(
+        linear,
+        50% 0%,
+        50% 100%,
+        color-stop(0%, #d5d5d5),
+        color-stop(50%, #ffffff),
+        color-stop(50%, #2fd51d),
+        color-stop(100%, #00a01e)
+      );
+      background-image: -webkit-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #2fd51d 50%,
+        #00a01e
+      );
+      background-image: -moz-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #2fd51d 50%,
+        #00a01e
+      );
+      background-image: -o-linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #2fd51d 50%,
+        #00a01e
+      );
+      background-image: linear-gradient(
+        #d5d5d5,
+        #ffffff 50%,
+        #2fd51d 50%,
+        #00a01e
+      );
+    }
+    /* line 113, ../sass/screen.scss */
+    .cool_btn1.green h1 {
+      color: #00a01e;
+    }
+    /* line 116, ../sass/screen.scss */
+    .cool_btn1.green h2 {
+      color: #006312;
+    }
+
+    /* line 128, ../sass/screen.scss */
+    .cool_btn1.teal:hover {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(16, 216, 252, 0.8);
+      -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(16, 216, 252, 0.8);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(16, 216, 252, 0.8);
+    }
+
+    /* line 133, ../sass/screen.scss */
+    .cool_btn1.blue:hover {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(43, 95, 187, 0.8);
+      -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(43, 95, 187, 0.8);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(43, 95, 187, 0.8);
+    }
+
+    /* line 138, ../sass/screen.scss */
+    .cool_btn1.green:hover {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(47, 217, 29, 0.8);
+      -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(47, 217, 29, 0.8);
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3),
+        inset 0px 2px 5px rgba(0, 0, 0, 0.3),
+        0 0 28px 6px rgba(47, 217, 29, 0.8);
+    }
+
+    /* -------------------
+    Media Queries
+    -------------------- */
+    @media screen and (max-width: 860px) {
+      /* line 147, ../sass/screen.scss */
+      #wrapper {
+        width: 700px;
+      }
+    }
+    @media screen and (max-width: 740px) {
+      /* line 152, ../sass/screen.scss */
+      #wrapper {
+        width: 480px;
+      }
+    }
+    @media screen and (max-width: 440px) {
+      /* line 157, ../sass/screen.scss */
+      #wrapper {
+        width: 370px;
+        text-align: center;
+      }
+    }
+
+
+
+
+
+
+
+
+.badge {
+  position: relative;
+  margin: 1.5em 3em;
+  width: 4em;
+  height: 6.2em;
+  border-radius: 10px;
+  display: inline-block;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.badge:before, .badge:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge:before {
+  transform: rotate(60deg);
+}
+.badge:after {
+  transform: rotate(-60deg);
+}
+.badge:hover {
+  top: -4px;
+}
+.badge .circle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: #fff;
+  z-index: 10;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.badge .circle i.fa {
+  font-size: 2em;
+  margin-top: 8px;
+}
+.badge .font {
+  display: inline-block;
+  margin-top: 1em;
+}
+.badge .ribbon {
+  position: absolute;
+  border-radius: 4px;
+  padding: 5px 5px 4px;
+  width: 100px;
+  z-index: 11;
+  color: #fff;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -55px;
+  height: 15px;
+  font-size: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  background: linear-gradient(to bottom right, #555 0%, #333 100%);
+  cursor: default;
+}
+
+.yellow {
+  background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+  color: #ffb300;
+}
+
+.orange {
+  background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+  color: #f68401;
+}
+
+.pink {
+  background: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
+  color: #dc306f;
+}
+
+.red {
+  background: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
+  color: #c62828;
+}
+
+.purple {
+  background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+  color: #7127a8;
+}
+
+.teal {
+  background: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
+  color: #34a297;
+}
+
+.blue {
+  background: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
+  color: #259af3;
+}
+
+.blue-dark {
+  background: linear-gradient(to bottom right, #1976D2 0%, #283593 100%);
+  color: #1c68c5;
+}
+
+.green {
+  background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+  color: #7cb342;
+}
+
+.green-dark {
+  background: linear-gradient(to bottom right, #4CAF50 0%, #1B5E20 100%);
+  color: #00944a;
+}
+
+.silver {
+  background: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
+  color: #9e9e9e;
+}
+
+.gold {
+  background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+  color: #b7892b;
+}
+
+
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script th:inline="javascript">
@@ -171,7 +684,7 @@
         var leftPosition = (window.screen.width - popupWidth) / 2;
         var topPosition = (window.screen.height - popupHeight) / 2;
 
-        window.open(/*[[@{/wthdr}]]*/, '_blank', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + leftPosition + ', top=' + topPosition);
+        window.open(/*[[@{/pay/wthdr}]]*/, '_blank', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + leftPosition + ', top=' + topPosition);
     }
 
 
@@ -261,45 +774,17 @@
                 }
             });
 
-</script>
 
+</script>
 
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
-
-    <style>
-        #calendar {
-            width: 550px;
-            margin: 0;
-            float: left;
-        }
-        .attendance-image {
-            width: 90%;
-            height: 90%;
-            margin-left: 3px;
-        }
-        .check-button {
-            display: inline-block;
-            margin-top: 5px;
-            cursor: pointer;
-            border: none;
-        }
-    </style>
-<!--    <th:block layout:fragment="script">-->
-<!--        <script src='https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js'></script>-->
-<!--        <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' rel='stylesheet'/>-->
-<!--        <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css' rel='stylesheet' media='print'/>-->
-<!--        <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js'></script>-->
-<!--    </th:block>-->
 
 </head>
 <body>
 <div layout:fragment="content">
 
-
-
     <div class="container">
-
         <div class="profile-area">
             <!-- 프로필 영역 내용 -->
             <div class="profile">
@@ -307,7 +792,7 @@
                 <div class="info">
                     <div class="ratings">
                         <img src="/image/myPage/score.PNG" alt="평점 이미지">
-                        <div class="score">3.7</div>
+                        <div class="score">리뷰점수</div>
                     </div>
                     <div class="information">
                         <div class="nickname">Lv. <span th:text="${user.level}"></span> <span th:text="${user.nickName}"></span></div>
@@ -356,24 +841,103 @@
                 </div>
             </div>
 
-            <div class="attendance">
-                <div id="calendar"></div>
+            <div class="deco">
+
+                <div class="cool_btn1 green">
+                    <h1 class="u-day"> <i>출석일수</i></h1>
+                    <h2></h2>
+                </div>
+                <div class="cool_btn1 teal">
+                    <h1 class="u-score">4.7 <i>리뷰</i></h1>
+                    <h2></h2>
+                </div>
+                <div class="cool_btn1 blue">
+                    <h1 class="u-trade">240 <i>거래횟수</i></h1>
+                    <h2></h2>
+                </div>
+
+
+
+                    <div class="badge yellow">
+                        <div class="circle"> <i class="fa fa-bolt"></i></div>
+                        <div class="ribbon">번개맞아본자</div>
+                    </div>
+                    <div class="badge orange">
+                        <div class="circle"> <i class="fa fa-wheelchair-alt"></i></div>
+                        <div class="ribbon">병신이에요</div>
+                    </div>
+                    <div class="badge pink">
+                        <div class="circle"> <i class="fa fa-pied-piper"></i></div>
+                        <div class="ribbon">모자팔이</div>
+                    </div>
+                    <div class="badge red">
+                        <div class="circle"> <i class="fa fa-shield"></i></div>
+                        <div class="ribbon">탱커</div>
+                    </div>
+                    <div class="badge purple">
+                        <div class="circle"> <i class="fa fa-anchor"></i></div>
+                        <div class="ribbon">해적</div>
+                    </div>
+                    <div class="badge teal">
+                        <div class="circle"> <i class="fa fa-bicycle"></i></div>
+                        <div class="ribbon">자전거타고가는병신</div>
+                    </div>
+                    <div class="badge blue">
+                        <div class="circle"> <i class="fa fa-users"></i></div>
+                        <div class="ribbon">셋이나옴</div>
+                    </div>
+                    <div class="badge blue-dark">
+                        <div class="circle"> <i class="fa fa-rocket"></i></div>
+                        <div class="ribbon">로켓배송</div>
+                    </div>
+                    <div class="badge green">
+                        <div class="circle"> <i class="fa fa-tree"></i></div>
+                        <div class="ribbon">촌에사는새끼</div>
+                    </div>
+                    <div class="badge green-dark">
+                        <div class="circle"> <i class="fa fa-user fa-street-view"></i></div>
+                        <div class="ribbon">찐따</div>
+                    </div>
+                    <div class="badge silver">
+                        <div class="circle"> <span class="font">AFK</span></div>
+                        <div class="ribbon">거래잠수존나함</div>
+                    </div>
+                    <div class="badge gold">
+                        <div class="circle"> <i class="fa fa-magic"></i></div>
+                        <div class="ribbon">담배냄새남</div>
+                    </div>
+
+
+
             </div>
         </div>
 
         <div class="Categories">
-            <!-- 네비게이션 바 내용 -->
+            <ul class="list">
+                <li class="tab-button p select">판매내역</li>
+                <li class="tab-button i">급해요</li>
+                <li class="tab-button g">후기</li>
+            </ul>
         </div>
-        네비게이션 바 영역
 
 
         <div class="board-area">
             <!-- 보드 영역 내용 -->
             보드 영역
         </div>
+        <div class="tab-content p show">
+            <p>판매내역 보드</p>
+        </div>
 
+        <div class="tab-content i">
+            <p>급해요 보드</p>
+        </div>
+
+        <div class="tab-content g">
+            <p>ㅇ</p>
+        </div>
     </div>
-
+    <script type="text/javascript" th:src="@{/js/myPage.js}"></script>
 </div>
 </body>
 </html>
